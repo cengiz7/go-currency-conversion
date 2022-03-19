@@ -69,7 +69,7 @@ func findExchangeRate() int {
 func getExchangeRate() (newRate float32) {
 	for {
 		var rateStr string
-		fmt.Printf("Write Exchange Rate(e.g 1,34) -> ")
+		fmt.Printf("Write Exchange Rate(e.g 12.34) -> ")
 		fmt.Scanf("%s", &rateStr)
 		if newRate, err := strconv.ParseFloat(rateStr, 32); err == nil && newRate > 0 {
 			return float32(newRate)
